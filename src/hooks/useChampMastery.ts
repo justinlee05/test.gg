@@ -5,11 +5,9 @@ import { getChampList } from "../data/modules/redux/action/ChampMastery";
 export const useChampMastery = () => {
   const state = useSelector((state: RootState) => state.ChampMasteryReducer);
   const dispatch = useDispatch();
-
-  const getById = (payload: string) => dispatch(getChampList(payload));
-
-  return [
-    state,
-    getById
-  ];
-}
+  const setState = {
+    getList: (payload: string) => dispatch(getChampList(payload)),
+  };
+  
+  return {state, setState};
+};

@@ -3,10 +3,10 @@ import { uri } from "./uri";
 
 export const ApiRequest = () => {
   const request = axios.create({
-    baseURL: "https://kr.api.riotgames.com",
-    timeout: 1000,
+    baseURL: "",
+    timeout: 1000000,
     headers: {
-      Authrization: "RGAPI-04932f19-713d-4d81-8be2-71532cde4c02",
+      "X-Riot-Token": "RGAPI-ed406459-7c5c-4b38-9106-663c8cac8063",
     },
   });
   return request;
