@@ -1,0 +1,1 @@
+export const GET_CHAMPLIST = "champmastery/GET_CHAMPLIST"
