@@ -3,11 +3,11 @@ import { RootState } from "../data/modules/redux/store";
 import { getChampList } from "../data/modules/redux/action/ChampMastery";
 
 export const useChampMastery = () => {
-  const state = useSelector((state: RootState) => state.ChampMasteryReducer);
   const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state.ChampMasteryReducer);
   const setState = {
     getList: (payload: string) => dispatch(getChampList(payload)),
   };
-  
-  return {state, setState};
+
+  return { state, setState };
 };

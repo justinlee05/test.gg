@@ -7,6 +7,7 @@ const TestComponent = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
+    console.log(champState.state);
     champState.setState.getList("이킵드");
 
     setTimeout(() => {
