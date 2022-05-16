@@ -6,7 +6,7 @@ export const ApiRequest = () => {
     baseURL: "",
     timeout: 1000000,
     headers: {
-      "X-Riot-Token": "RGAPI-fd07bb31-b991-44a1-8396-0367d488c75c",
+      "X-Riot-Token": "RGAPI-d840b3dc-16ef-4593-ab72-e19f04305356",
     },
   });
   return request;

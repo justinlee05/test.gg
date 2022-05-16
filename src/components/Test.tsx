@@ -1,20 +1,14 @@
 import { useEffect, useState } from "react";
 import { getUserId } from "../data/api/getUserId";
-import { useChampMastery } from "../hooks/useChampMastery";
+import { useAllChampMastery } from "../hooks/useChampMastery/useAllChampMastery";
 
 const TestComponent = () => {
-  const champState = useChampMastery();
-  const [data, setData] = useState();
+  const { data, isLoading } = useAllChampMastery();
 
   useEffect(() => {
-    console.log(champState.state);
-    champState.setState.getList("이킵드");
-
-    setTimeout(() => {
-      console.log(champState.state)
-    }, 3000);
-  }, []);
-
-  return <></>;
+    console.log(data, isLoading);
+  }, [data, isLoading]);
+  return <p>
+  </p>;
 };
 export default TestComponent;
