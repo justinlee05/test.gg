@@ -18,9 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     #RouterWrapper{
         width:100%;
-        min-height:calc(100vh - 80px);
+        min-height:calc(100vh - 60px);
         max-height:fit-content;
-        margin-top:80px;
+        margin-top:60px;
         overflow-x:hidden;
     }
 `;

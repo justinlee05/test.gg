@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import TestComponent from "../components/Test";
+import { HeaderContainer, StartContainer } from "../containers";
 
 function MainRouter() {
   return (
     <>
-      <TestComponent />
+      <HeaderContainer />
+      <StartContainer />
     </>
   );
 }
