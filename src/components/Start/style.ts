@@ -6,12 +6,9 @@ export const S = {
     width: 100%;
     height: calc(100vh - 60px);
     animation-name:BackgroundStartMove;
-    animation-duration:3s;
+    animation-duration:1.5s;
     animation-fill-mode: forwards;
     @keyframes BackgroundStartMove {
-        0%{
-
-        }
         60%{
             height: calc(100vh - 60px);
         }
@@ -21,26 +18,30 @@ export const S = {
         }
     }
   `,
-  Logo: styled.img`
+  Logo: styled.div`
     position: absolute;
+    width:0px;
+    height:0px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
     animation-name: ImgstartMove;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    left: -50px;
+    left: -500px;
     bottom: 40%;
     @keyframes ImgstartMove {
       0% {
-        left: -500px;
-        bottom: 40%;
+        bottom: 50%;
       }
-      
       60% {
-        bottom: 40%;
-        left: 40%;
+        bottom: 50%;
+        left:50%;
       }
       100% {
-        left: 40%;
         bottom: 100%;
+        left:50%;
         display:none;
       }
     }
