@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getChampData } from "../data/api/getChampData";
 import { getChampInfoById } from "../data/api/getChampInfoById";
 import { getUserId } from "../data/api/getUserId";
 import { useAllChampMastery } from "../hooks/useChampMastery/useAllChampMastery";
@@ -11,6 +12,7 @@ const TestComponent = () => {
   useEffect(() => {
     console.log(data, isLoading);
     console.log(champdata)
+    getChampData("Aatrox");
   }, [data, isLoading,champdata]);
   return <p>
     <Search setResult={setSearch} />

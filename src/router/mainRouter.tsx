@@ -8,6 +8,7 @@ function MainRouter() {
     <>
       <HeaderContainer />
       <StartContainer />
+      <TestComponent />
     </>
   );
 }

@@ -6,8 +6,7 @@ const ChampMasteryByLevel = (playerid: string) =>
   `/lol/champion-mastery/v4/scores/by-summoner/${playerid}`;
 const GetSummonerId = (playerName: string) =>
   `/lol/summoner/v4/summoners/by-name/${playerName}`;
-
-export const uri = {
+export const rioturi = {
   champ_mastery_score: ChampMasteryByScore,
   champ_mastery_champ: ChampMasteryByChamp,
   champ_mastery_level: ChampMasteryByLevel,

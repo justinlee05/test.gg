@@ -1,5 +1,7 @@
 import champ from '../../utils/champion.json'
 
+//이름,스토리 등.
+
 export const getChampInfoById = (ChampionId:string) => {
     const list:any = champ.data;
     const keys = Object.keys(list);

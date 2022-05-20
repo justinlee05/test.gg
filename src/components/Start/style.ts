@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const S = {
   TotalWrapper: styled.div`
     background-color: lightgray;
+    position:fixed;
     width: 100%;
     height: calc(100vh - 60px);
     animation-name:BackgroundStartMove;
@@ -19,7 +20,7 @@ export const S = {
     }
   `,
   Logo: styled.div`
-    position: absolute;
+    position: fixed;
     width:0px;
     height:0px;
     display:flex;

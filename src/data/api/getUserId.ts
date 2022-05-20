@@ -1,5 +1,5 @@
-import { ApiRequest } from "./default";
-import { uri } from "./uri";
+import { RiotApiRequest } from "./default";
+import {  rioturi } from "./Rioturi";
 
 type IdResponseType = {
   accountId: string; //string	Encrypted account ID. Max length 56 characters.
@@ -13,7 +13,7 @@ type IdResponseType = {
 
 export const getUserId = async (playerName: string) => {
   try {
-    const response = await ApiRequest().get(uri.get_summoner_id(playerName));
+    const response = await RiotApiRequest().get(rioturi.get_summoner_id(playerName));
     console.log("res",response)
     return response.data;
   } catch (err) {
