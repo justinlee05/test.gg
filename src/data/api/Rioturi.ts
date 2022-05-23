@@ -1,3 +1,4 @@
+//riot api에 요청을 보내기 위해 사용하는 uri입니다.
 const ChampMasteryByScore = (playerid: string) =>
   `/lol/champion-mastery/v4/champion-masteries/by-summoner/${playerid}`;
 const ChampMasteryByChamp = (playerid: string, champid: string) =>

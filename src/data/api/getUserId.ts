@@ -11,6 +11,8 @@ type IdResponseType = {
   summonerLevel: number; //long	Summoner level associated with the summoner.
 };
 
+//유저의 닉네임을 통해 id값을 가져오는 함수입니다.
+
 export const getUserId = async (playerName: string) => {
   try {
     const response = await RiotApiRequest().get(rioturi.get_summoner_id(playerName));
