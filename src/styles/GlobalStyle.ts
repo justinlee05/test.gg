@@ -14,13 +14,19 @@ export const GlobalStyle = createGlobalStyle`
         img{
             -webkit-user-drag: none;
         }
+        @font-face {
+      font-family: "SuncheonB";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff")
+        format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
         
     }
     #RouterWrapper{
-        width:100%;
-        min-height:calc(100vh - 60px);
-        max-height:fit-content;
+        min-width:100%;
+        width:fit-content;
+        height:fit-content;
         margin-top:60px;
-        overflow-x:hidden;
     }
 `;
