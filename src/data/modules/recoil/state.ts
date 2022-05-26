@@ -9,15 +9,26 @@ export const champMasteryState = atom({
   },
 });
 
+type Tiertype = {
+  type: "";
+  tier: "";
+  rank: "";
+};
+
 export const searchResult = atom({
   key: "searchResult",
-  default:{
-    id:"",
-    name:"",
-    level:0,
-    tier:"",
-    rank:"",
-    icon:0,
-
-  }
-})
+  default: {
+    icon: 0,
+    id: "",
+    level: 0,
+    name: "",
+    tiers: [
+      {
+        type: "",
+        tier: "",
+        rank: "",
+      },
+      undefined
+    ],
+  },
+});
