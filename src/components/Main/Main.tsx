@@ -1,9 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import { useQuery } from "react-query";
+import { useRef, useState } from "react";
 import { useRecoilState } from "recoil";
-import { getPlayerLeague } from "../../data/api/getPlayerLeague";
-import { getUserId } from "../../data/api/getUserId";
 import { searchResult } from "../../data/modules/recoil/state";
+import { searchUser } from "../../utils/searchUser";
 import { S } from "./style";
 
 const Main = () => {
@@ -11,30 +9,11 @@ const Main = () => {
   const [result, setResult] = useRecoilState(searchResult);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const search = async (name: any) => {
-    const summonerInfo = await getUserId(name);
-    const leagueInfo = getPlayerLeague(summonerInfo.id);
-    console.log(1, summonerInfo, leagueInfo);
-    const data = {
-      name: summonerInfo.name,
-      id: summonerInfo.id,
-      level: summonerInfo.summonerLevel,
-      tier: (await leagueInfo).data[0].tier,
-      rank: (await leagueInfo).data[0].rank,
-      icon: summonerInfo.profileIconId,
-    };
-    setResult(data);
-    console.log(data);
-  };
-
-  useEffect(() => {
-    search("hide on bush");
-  }, []);
-
-  const onKeyPress = (e: any) => {
+  const onKeyPress = async (e: any) => {
     if (e.key === "Enter") {
-      const value = inputRef.current?.value;
-      search(inputRef.current?.value);
+      const result = await searchUser(inputRef.current?.value);
+      console.log(result);
+      setResult(result);
     }
   };
 
