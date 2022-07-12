@@ -5,15 +5,14 @@ import { searchUser } from "../../utils/searchUser";
 import { S } from "./style";
 
 const Main = () => {
-  const [showResult, setShowResult] = useState(false);
+  const [showResult, setShowResult] = useState<boolean>(false);
   const [result, setResult] = useRecoilState(searchResult);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const onKeyPress = async (e: any) => {
-    if (e.key === "Enter") {
-      const result = await searchUser(inputRef.current?.value);
-      console.log(result);
-      setResult(result);
+  const onKeyPress = async (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && result.name !== inputRef.current?.value) {
+      const searchresult = await searchUser(inputRef.current?.value);
+      setResult(searchresult);
     }
   };
 
